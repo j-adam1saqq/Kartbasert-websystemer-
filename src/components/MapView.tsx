@@ -51,10 +51,7 @@ export default function MapView() {
     // Map
     const map = new OlMap({
       target: mapDivRef.current,
-      layers: [
-        new TileLayer({ source: new OSM() }),
-        fylkerLayer,
-      ],
+      layers: [new TileLayer({ source: new OSM() }), fylkerLayer],
       overlays: [overlay],
       view: new View({
         center: [10.75, 59.91], // Oslo-ish
@@ -67,10 +64,9 @@ export default function MapView() {
 
     // Klikk-håndtering
     map.on("singleclick", (evt) => {
-      const feature = map.forEachFeatureAtPixel(
-        evt.pixel,
-        (f) => f
-      ) as Feature | undefined;
+      const feature = map.forEachFeatureAtPixel(evt.pixel, (f) => f) as
+        | Feature
+        | undefined;
 
       let tekst = "Du klikket på kartet";
 
@@ -96,10 +92,7 @@ export default function MapView() {
 
   return (
     <div style={{ width: "100%", height: "100%", position: "relative" }}>
-      <div
-        ref={mapDivRef}
-        style={{ width: "100%", height: "100%" }}
-      />
+      <div ref={mapDivRef} style={{ width: "100%", height: "100%" }} />
 
       {/* Popup */}
       <div
