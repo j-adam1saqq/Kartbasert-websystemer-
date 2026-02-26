@@ -1,0 +1,23 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "navn": "Test-fylke"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [10.0, 59.5],
+            [11.0, 59.5],
+            [11.0, 60.2],
+            [10.0, 60.2],
+            [10.0, 59.5]
+          ]
+        ]
+      }
+    }
+  ]
+}
