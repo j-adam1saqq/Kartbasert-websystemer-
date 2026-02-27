@@ -1,9 +1,9 @@
-import MapView from "./components/MapView";
 import "./App.css";
+import MapView from "./components/MapView";
 
 export default function App() {
   return (
-    <div style={{ width: "100vw", height: "100vh" }}>
+    <div className="app">
       <MapView />
     </div>
   );
